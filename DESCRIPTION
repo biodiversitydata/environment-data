@@ -1,0 +1,26 @@
+Package: environment-data
+Type: Package
+Title: Environment Databases
+Version: 2.0
+Authors@R: c(
+    person(given   = "Camille",
+           family  = "Coux",
+           role    = c("aut", "cre", "cph"),
+           email   = "camille.coux@fondationbiodiversite.fr",
+           comment = c(ORCID = "0000-0002-6346-9194")))
+Description: Quarto slides of the course 'Environment Databases - Most 
+    frequently used databases in biodiversity research'. These slides are part 
+    of the training course 'Biodiversity data - From data collection to 
+    publication' organized by FRB-CESAB, PNDB & GBIF France since 2024.
+URL: https://github.com/biodiversitydata/environment-data
+BugReports: https://github.com/biodiversitydata/environment-data/issues
+License: CC BY 4.0
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Depends: 
+    ggplot2,
+    rnaturalearth
+Imports: 
+    knitr,
+    rmarkdown
