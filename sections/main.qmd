@@ -97,18 +97,8 @@
 
 ## Climate & weather
 
-:::: {.columns}
-
-::: {.column width=50%}
 **WorldClim**
-::: 
 
-::: {.column width=50%}
-
-![](images/worldclim-logo.png){width=35%}
-::: 
-
-::::
 
 > Downloadable GeoTiff zipped files of Average minimum temperature (°C), average maximum temperature (°C) and total precipitation (mm), at resolutions from 30 seconds (~1 km2 at the equator) to 10 minutes (~340 km2). 
 
@@ -129,8 +119,6 @@ Meta data or data paper...?
 
 ## Land cover
 
-
-<br>
 
 **Copernicus**
 
@@ -171,7 +159,7 @@ Data access protocol [here](https://esa-worldcover.org/en/data-access).
 
 Data access description [here](https://www.fao.org/soils-portal/data-hub/soil-maps-and-databases/harmonized-world-soil-database-v12/en/).
 
-<br><br>
+<br>
 
 **SoilTemp**
 
@@ -190,7 +178,7 @@ Metadata of the first part of our database can however already be freely explore
 
 Super easy shapefile download [here](https://www.worldwildlife.org/publications/marine-ecoregions-of-the-world-a-bioregionalization-of-coastal-and-shelf-areas)!
 
-<br><br>
+<br>
 
 **WWF TEOW**
 
@@ -220,7 +208,7 @@ And a user guide [PDF](https://wdpa.s3-eu-west-1.amazonaws.com/WDPA_Manual/Engli
 
 [Browse](https://gadm.org/maps.html) our maps or [download](https://gadm.org/download_country.html) the data by country. 
 
-<br><br>
+<br>
 
 **Natural Earth**
 
@@ -231,7 +219,9 @@ Available features list [here](https://www.naturalearthdata.com/features/).
 
 ## Country boundaries
 
-Also, check ou the R package `rnaturalearth`:
+Check out the {{< fa brands r-project >}} package [`rnaturalearth`](https://cran.r-project.org/web/packages/rnaturalearth/vignettes/rnaturalearth.html):
+
+<br />
 
 :::: {.columns}
 
@@ -241,15 +231,20 @@ Also, check ou the R package `rnaturalearth`:
 #| echo: true
 #| eval: false
 
-library(rnaturalearth)
+## Import boundaries of Africa ----
+
+africa <- rnaturalearth::ne_countries(
+  continent = "africa"
+)
+
+
+## Map layer ----
+
 library(ggplot2)
 
-world <- ne_countries()
-africa <- ne_countries(continent = "africa")
-france <- ne_countries(country = "france")
-
-theme_set(theme_bw())
-ggplot(africa) + geom_sf()
+ggplot(africa) + 
+  geom_sf() + 
+  theme_bw()
 ```
 :::
 
@@ -286,7 +281,7 @@ Digital Elevation Model.
 
 Plenty available, but main ones are listed [here](https://gisgeography.com/free-global-dem-data-sources/).
 
-<br><br>
+<br>
 
 **Bio-oracle**
 
