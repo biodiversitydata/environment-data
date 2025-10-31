@@ -82,7 +82,7 @@ To understand the file organisation of this repository, please read this [Wiki](
 
 ## Citation
 
-Coux C & Casajus N (2024) _Environment databases_. Online presentation available at <https://github.com/biodiversitydata/environment-data/>.
+Coux C (2025) _Environment databases_. Online presentation available at <https://github.com/biodiversitydata/environment-data/>.
 
 
 ## Contributing
