@@ -82,7 +82,7 @@ To understand the file organisation of this repository, please read this [Wiki](
 
 ## Citation
 
-Coux C (2025) _Environment databases_. Online presentation available at <https://github.com/biodiversitydata/environment-data/>.
+Coux C (2025) Environment databases: Most frequently used databases in biodiversity research. Online presentation available at <https://github.com/biodiversitydata/environment-data/>.
 
 
 ## Contributing
