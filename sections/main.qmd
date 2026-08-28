@@ -12,7 +12,8 @@
 
 :::: {.columns}
 
-::: {.column width=33%}
+::: {.column width=25%}
+
 **Climate & weather**
 
 - WorldClim
@@ -20,20 +21,31 @@
 - CMIP6
 :::
 
-::: {.column width=33%}
+::: {.column width=25%}
+
 **Land cover**
 
 - Corine
 - Copernicus
 - WorldCover
+
 :::
 
-::: {.column width=33%}
-**Soil data**
+::: {.column width=25%}
 
-- SoilTemp
-- HWSD
+**Water bodies**
+
+- Global Surface Waters
+- World rivers
 :::
+
+::: {.column width=25%}
+**Elevation & Bathymetry**
+
+- DEM
+- Bio-oracle
+:::
+
 
 ::::
 
@@ -41,20 +53,29 @@
 
 :::: {.columns}
 
-::: {.column width=33%}
+
+::: {.column width=25%}
+
+**Soil data**
+
+- SoilTemp
+- HWSD
+:::
+
+::: {.column width=25%}
 **Ecoregions**
 
 - WWF MEOW
 - WWF TEOW
 :::
 
-::: {.column width=33%}
+::: {.column width=25%}
 **Protected areas**
 
 - WDPA
 :::
 
-::: {.column width=33%}
+::: {.column width=25%}
 **Country boundaries**
 
 - Natural Earth
@@ -67,21 +88,20 @@
 
 :::: {.columns}
 
-::: {.column width=33%}
+::: {.column width=25%}
 **Socio-economics**
 
 - FAO
 - UNDP
+- Human Footprint
+
 :::
 
-::: {.column width=33%}
-**Elevation & Bathymetry**
 
-- DEM
-- Bio-oracle
-:::
 
-::: {.column width=33%}
+::: {.column width=25%}
+
+
 **Satellite data**
 
 - NDVI
@@ -89,9 +109,21 @@
 - Modis
 :::
 
+::: {.column width=25%}
+
+**Data aggregators**
+
+- Data Terra
+- Earth Engine
+- datagouv
+
+:::
+
+::: {.column width=25%}
+ 
+:::
+
 ::::
-
-
 
 
 
@@ -102,19 +134,29 @@
 
 > Downloadable GeoTiff zipped files of Average minimum temperature (°C), average maximum temperature (°C) and total precipitation (mm), at resolutions from 30 seconds (~1 km2 at the equator) to 10 minutes (~340 km2). 
 
+:::: {.columns}
+
+:::{.column width=50%}
+
 - [Historical climate](https://worldclim.org/data/worldclim21.html) data
 - [Historical monthly weather](https://worldclim.org/data/monthlywth.html) data
 - [Future climate](https://worldclim.org/data/cmip6/cmip6climate.html) data based on [CMIP6 models](https://www.carbonbrief.org/cmip6-the-next-generation-of-climate-models-explained/)
 
-<br>
+:::
+
+:::{.column width=50%}
+
+![](images/chelsa-climate.png){width=50% fig-align="right"}
+
+:::
+
+::::
 
 **Chelsa**
 
 > **C**limatologies at **h**igh resolution for the **e**arth’s **l**and **s**urface **a**reas is a very high resolution (30 arc sec, ~1km) global downscaled climate data set 
 
-Technical specifications [PDF](https://chelsa-climate.org/wp-admin/download-page/CHELSA_tech_specification_V2.pdf) : read it before you download anything !
-
-Meta data or data paper...?
+[Daily](https://www.chelsa-climate.org/datasets/chelsa_daily), [monthly](https://www.chelsa-climate.org/datasets/chelsa_monthly), [annual](https://www.chelsa-climate.org/datasets/chelsa_bioclim) means for temperature, precipitation, wind speed, droughts, etc.
 
 
 ## Land cover
@@ -129,6 +171,8 @@ At the heart of Copernicus is a constellation of satellites – the Sentinels �
 Each satellite has its specificities and you should read about them before anything else.
 
 Download data through many different portals: Copernicus Atmosphere Monitoring Service (CAMS) Portal, Copernicus Marine Monitoring Service (CMEMS) Portal, [Copernicus Land Monitoring Service](https://land.copernicus.eu/en) where Corine is just one of them...
+
+![](images/copernicus-logo.png){width=40% fig-align="center"}
 
 
 ## Land cover
@@ -148,7 +192,43 @@ Updated every six years (most recent in 2018).
 
 Data access protocol [here](https://esa-worldcover.org/en/data-access).
 
+![](images/worldcover-logo.png){width=25% fig-align="right"}
 
+
+## Water bodies
+
+**Global Surface Waters**
+
+> 30m resolution World surface waters from 1984-2024.
+
+Download [here](https://global-surface-water.appspot.com/download)
+
+<br/>
+
+**World rivers**
+
+Hydrography 90m layers, world wide. Multiple access possibilities, check it out [here](https://hydrography.org/hydrography90m/hydrography90m_layers).
+
+
+
+
+## Elevation & Bathymetry
+
+**DEM**
+
+Digital Elevation Model.
+
+Plenty available, but main ones are listed [here](https://gisgeography.com/free-global-dem-data-sources/).
+
+<br>
+
+**Bio-oracle**
+
+> Essential physical, chemical, biological and topographic data layers with global extent and uniform resolution for modelling the distribution of marine biodiversity.
+
+Download manager [here](https://bio-oracle.org/downloads-to-email.php).
+
+Also features bathymetry.
 
 
 ## Soil data
@@ -161,22 +241,13 @@ Data access description [here](https://www.fao.org/soils-portal/data-hub/soil-ma
 
 <br>
 
-**SoilTemp**
-
-> Global database of microclimate time series (soil and near-surface temperatures, soil moisture, …) and associated species data for use in ecology and beyond.
-
-100.000 time series from more than 100 countries across the globe, submitted by more than a thousand data contributors. **The database is still under development and data is not yet open access.**
-
-Metadata of the first part of our database can however already be freely explored [here](https://www.soiltempproject.com/the-soiltemp-database).
-
-
 ## Ecoregions
 
 **WWF MEOW**
 
 > Marine Ecoregions of the World: A Bioregionalization of Coastal and Shelf Areas
 
-Super easy shapefile download [here](https://www.worldwildlife.org/publications/marine-ecoregions-of-the-world-a-bioregionalization-of-coastal-and-shelf-areas)!
+Super easy shapefile download [here](https://resourcewatch.org/data/explore/Marine-Ecoregions)!
 
 <br>
 
@@ -184,7 +255,7 @@ Super easy shapefile download [here](https://www.worldwildlife.org/publications/
 
 > Terrestrial Ecoregions of the World
 
-Super easy shapefile download [here](https://www.worldwildlife.org/publications/terrestrial-ecoregions-of-the-world)!
+Super easy shapefile download [here](https://www.geographyrealm.com/terrestrial-ecoregions-gis-data)!
 
 
 
@@ -197,6 +268,8 @@ Super easy shapefile download [here](https://www.worldwildlife.org/publications/
 Interactive exploration [here](https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=Methodology).
 
 And a user guide [PDF](https://wdpa.s3-eu-west-1.amazonaws.com/WDPA_Manual/English/WDPA_WDOECM_Manual_1_6.pdf)
+
+![](images/mpa.png){width=40% fig-align="center"}
 
 
 
@@ -215,6 +288,8 @@ And a user guide [PDF](https://wdpa.s3-eu-west-1.amazonaws.com/WDPA_Manual/Engli
 > Natural Earth is a public domain map dataset available at 1:10m, 1:50m, and 1:110 million scales. Featuring tightly integrated vector and raster data.
 
 Available features list [here](https://www.naturalearthdata.com/features/).
+
+![](images/natural-earth-logo.png){width=40% fig-align="right"}
 
 
 ## Country boundaries
@@ -273,24 +348,6 @@ ggplot(africa) + geom_sf()
 ::::
 
 
-## Elevation & Bathymetry
-
-**DEM**
-
-Digital Elevation Model.
-
-Plenty available, but main ones are listed [here](https://gisgeography.com/free-global-dem-data-sources/).
-
-<br>
-
-**Bio-oracle**
-
-> Essential physical, chemical, biological and topographic data layers with global extent and uniform resolution for modelling the distribution of marine biodiversity.
-
-Download manager [here](https://bio-oracle.org/downloads-to-email.php).
-
-Also features bathymetry.
-
 
 ## Satellite data
 
@@ -310,7 +367,7 @@ Check out Modis collections [here](https://developers.google.com/earth-engine/da
 
 <br><br>
 
-/!\ *Satellite data is quite technical. Make sure you read the documentation - it's easy to get lost.*
+/!\\ *Satellite data is quite technical. Make sure you read the documentation - it's easy to get lost.*
 
 
 ## Socio-economics
@@ -320,3 +377,85 @@ Check out Modis collections [here](https://developers.google.com/earth-engine/da
 > Food and Agricultural Organization has a variety of statistical data on food, agriculture and the sustainable management of natural resources.
 
 Free and unrestricted access to 22 major databases. Check out portals list [here](https://www.fao.org/statistics/data-dissemination/agrifood-systems/en).
+
+**Human Footprint**
+
+>  A global map of human influence on the land surface. 
+
+Access via Google Earth Engine, Github or direct GeoTiff download [here](https://wcshumanfootprint.org/data-access).
+
+
+## Data aggregators
+
+
+:::: {.columns}
+
+::: {.column width=80%}
+
+
+#### [Theia data catalog](https://catalogue.theia.data-terra.org/)
+
+Five major themes: cryosphere, continental waters, land cover, agrosystems & biodiversity and imagery & radiometry. 
+
+<br/>
+
+
+#### [ODATIS Ocean Center](https://www.odatis-ocean.fr/en/data-and-services/data-access/direct-access-to-the-data-catalogue#/search?from=1&to=30)
+
+French Ocean observation data : Ocean observations sampled in situ and using remote sensing.
+
+<br/>
+
+
+#### [FormaTerre](https://www.poleterresolide.fr/acces-aux-donnees/catalogue/)
+
+On-demand processing for Digital Surface Models, ground deformation monitoring, etc.
+
+<br/>
+
+
+#### [PNDB, the biodiversity hub](https://www.pndb.fr/pages/pndb-themes-inspire/)
+
+Metadata catalog to access biodiversity data.
+
+<br/>
+
+#### [AERIS](https://www.aeris-data.fr/catalogue/)
+
+National data management activities and atmospheric science expertise.
+
+:::
+
+
+
+::: {.column width=20%}
+
+![](images/logo-theia.png){width=80% fig-align="right"}
+
+
+![](images/logo-odatis.png){width=70% fig-align="right"}
+
+
+![](images/logo-formaterre.png){width=80% fig-align="right"}
+
+
+![](images/logo-pndb.png){width=50% fig-align="right"}
+
+
+![](images/logo-aeris.png){width=50% fig-align="right"}
+
+:::
+
+::::
+
+
+## Data aggregators
+
+[Earth Engine Data Catalog](https://developers.google.com/earth-engine/datasets?hl=fr)
+
+For France : [Datagouv](https://www.data.gouv.fr/)
+
+
+## Extra goodies
+
+A [non-exhaustive sheet](https://docs.google.com/spreadsheets/d/1OW6X94Ha_-_v5fe8XJlQp7ncubgF1CG6LgAIUk1kFcY/edit?usp=sharing) made by our CESAB colleague Romain Frelat.
