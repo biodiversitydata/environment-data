@@ -6,12 +6,12 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="index_files/libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="index_files/libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="index_files/libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="index_files/libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+  <meta name="generator" content="quarto-1.10.18">
 
   <title>Environment databases</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,10 +20,16 @@
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -98,7 +104,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-7e9783838747aff8f3e1fd2788a0d82a.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-c444b5ab7e5d07b649b9ffd7e725c9a6.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -214,7 +220,7 @@
 <p>Most frequently used databases in biodiversity research</p>
 </div>
 <div class="date">
-<p>November 2025</p>
+<p>August 2026</p>
 </div>
 <div class="columns authors">
 <div class="column author" style="width:32%;">
@@ -283,41 +289,53 @@ Author name<br/>
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
 <div class="columns">
-<div class="column" style="width:33%;">
+<div class="column" style="width:25%;">
 <p><strong>Climate &amp; weather</strong></p>
 <ul>
 <li>WorldClim</li>
 <li>Chelsa</li>
 <li>CMIP6</li>
 </ul>
-</div><div class="column" style="width:33%;">
+</div><div class="column" style="width:25%;">
 <p><strong>Land cover</strong></p>
 <ul>
 <li>Corine</li>
 <li>Copernicus</li>
 <li>WorldCover</li>
 </ul>
-</div><div class="column" style="width:33%;">
+</div><div class="column" style="width:25%;">
+<p><strong>Water bodies</strong></p>
+<ul>
+<li>Global Surface Waters</li>
+<li>World rivers</li>
+</ul>
+</div><div class="column" style="width:25%;">
+<p><strong>Elevation &amp; Bathymetry</strong></p>
+<ul>
+<li>DEM</li>
+<li>Bio-oracle</li>
+</ul>
+</div></div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:25%;">
 <p><strong>Soil data</strong></p>
 <ul>
 <li>SoilTemp</li>
 <li>HWSD</li>
 </ul>
-</div></div>
-<p><br></p>
-<div class="columns">
-<div class="column" style="width:33%;">
+</div><div class="column" style="width:25%;">
 <p><strong>Ecoregions</strong></p>
 <ul>
 <li>WWF MEOW</li>
 <li>WWF TEOW</li>
 </ul>
-</div><div class="column" style="width:33%;">
+</div><div class="column" style="width:25%;">
 <p><strong>Protected areas</strong></p>
 <ul>
 <li>WDPA</li>
 </ul>
-</div><div class="column" style="width:33%;">
+</div><div class="column" style="width:25%;">
 <p><strong>Country boundaries</strong></p>
 <ul>
 <li>Natural Earth</li>
@@ -326,25 +344,29 @@ Author name<br/>
 </div></div>
 <p><br></p>
 <div class="columns">
-<div class="column" style="width:33%;">
+<div class="column" style="width:25%;">
 <p><strong>Socio-economics</strong></p>
 <ul>
 <li>FAO</li>
 <li>UNDP</li>
+<li>Human Footprint</li>
 </ul>
-</div><div class="column" style="width:33%;">
-<p><strong>Elevation &amp; Bathymetry</strong></p>
-<ul>
-<li>DEM</li>
-<li>Bio-oracle</li>
-</ul>
-</div><div class="column" style="width:33%;">
+</div><div class="column" style="width:25%;">
 <p><strong>Satellite data</strong></p>
 <ul>
 <li>NDVI</li>
 <li>LandSat</li>
 <li>Modis</li>
 </ul>
+</div><div class="column" style="width:25%;">
+<p><strong>Data aggregators</strong></p>
+<ul>
+<li>Data Terra</li>
+<li>Earth Engine</li>
+<li>datagouv</li>
+</ul>
+</div><div class="column" style="width:25%;">
+
 </div></div>
 </section>
 <section id="climate-weather" class="slide level2">
@@ -353,18 +375,25 @@ Author name<br/>
 <blockquote>
 <p>Downloadable GeoTiff zipped files of Average minimum temperature (°C), average maximum temperature (°C) and total precipitation (mm), at resolutions from 30 seconds (~1 km2 at the equator) to 10 minutes (~340 km2).</p>
 </blockquote>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li><a href="https://worldclim.org/data/worldclim21.html">Historical climate</a> data</li>
 <li><a href="https://worldclim.org/data/monthlywth.html">Historical monthly weather</a> data</li>
 <li><a href="https://worldclim.org/data/cmip6/cmip6climate.html">Future climate</a> data based on <a href="https://www.carbonbrief.org/cmip6-the-next-generation-of-climate-models-explained/">CMIP6 models</a></li>
 </ul>
-<p><br></p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/chelsa-climate.png" class="quarto-figure quarto-figure-right" style="width:50.0%"></p>
+</figure>
+</div>
+</div></div>
 <p><strong>Chelsa</strong></p>
 <blockquote>
 <p><strong>C</strong>limatologies at <strong>h</strong>igh resolution for the <strong>e</strong>arth’s <strong>l</strong>and <strong>s</strong>urface <strong>a</strong>reas is a very high resolution (30 arc sec, ~1km) global downscaled climate data set</p>
 </blockquote>
-<p>Technical specifications <a href="https://chelsa-climate.org/wp-admin/download-page/CHELSA_tech_specification_V2.pdf">PDF</a> : read it before you download anything !</p>
-<p>Meta data or data paper…?</p>
+<p><a href="https://www.chelsa-climate.org/datasets/chelsa_daily">Daily</a>, <a href="https://www.chelsa-climate.org/datasets/chelsa_monthly">monthly</a>, <a href="https://www.chelsa-climate.org/datasets/chelsa_bioclim">annual</a> means for temperature, precipitation, wind speed, droughts, etc.</p>
 </section>
 <section id="land-cover" class="slide level2">
 <h2>Land cover</h2>
@@ -375,6 +404,11 @@ Author name<br/>
 <p>At the heart of Copernicus is a constellation of satellites – the Sentinels – that make a huge number of daily observations of the Earth ecosystem.</p>
 <p>Each satellite has its specificities and you should read about them before anything else.</p>
 <p>Download data through many different portals: Copernicus Atmosphere Monitoring Service (CAMS) Portal, Copernicus Marine Monitoring Service (CMEMS) Portal, <a href="https://land.copernicus.eu/en">Copernicus Land Monitoring Service</a> where Corine is just one of them…</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/copernicus-logo.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
 </section>
 <section id="land-cover-1" class="slide level2">
 <h2>Land cover</h2>
@@ -387,6 +421,35 @@ Author name<br/>
 <p>WorldCover provides the first global land cover products for 2020 and 2021 at 10m resolution, developed and validated in near-real time based on Sentinel-1 and Sentinel-2 data.</p>
 </blockquote>
 <p>Data access protocol <a href="https://esa-worldcover.org/en/data-access">here</a>.</p>
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/worldcover-logo.png" class="quarto-figure quarto-figure-right" style="width:25.0%"></p>
+</figure>
+</div>
+</section>
+<section id="water-bodies" class="slide level2">
+<h2>Water bodies</h2>
+<p><strong>Global Surface Waters</strong></p>
+<blockquote>
+<p>30m resolution World surface waters from 1984-2024.</p>
+</blockquote>
+<p>Download <a href="https://global-surface-water.appspot.com/download">here</a></p>
+<p><br></p>
+<p><strong>World rivers</strong></p>
+<p>Hydrography 90m layers, world wide. Multiple access possibilities, check it out <a href="https://hydrography.org/hydrography90m/hydrography90m_layers">here</a>.</p>
+</section>
+<section id="elevation-bathymetry" class="slide level2">
+<h2>Elevation &amp; Bathymetry</h2>
+<p><strong>DEM</strong></p>
+<p>Digital Elevation Model.</p>
+<p>Plenty available, but main ones are listed <a href="https://gisgeography.com/free-global-dem-data-sources/">here</a>.</p>
+<p><br></p>
+<p><strong>Bio-oracle</strong></p>
+<blockquote>
+<p>Essential physical, chemical, biological and topographic data layers with global extent and uniform resolution for modelling the distribution of marine biodiversity.</p>
+</blockquote>
+<p>Download manager <a href="https://bio-oracle.org/downloads-to-email.php">here</a>.</p>
+<p>Also features bathymetry.</p>
 </section>
 <section id="soil-data" class="slide level2">
 <h2>Soil data</h2>
@@ -396,12 +459,6 @@ Author name<br/>
 </blockquote>
 <p>Data access description <a href="https://www.fao.org/soils-portal/data-hub/soil-maps-and-databases/harmonized-world-soil-database-v12/en/">here</a>.</p>
 <p><br></p>
-<p><strong>SoilTemp</strong></p>
-<blockquote>
-<p>Global database of microclimate time series (soil and near-surface temperatures, soil moisture, …) and associated species data for use in ecology and beyond.</p>
-</blockquote>
-<p>100.000 time series from more than 100 countries across the globe, submitted by more than a thousand data contributors. <strong>The database is still under development and data is not yet open access.</strong></p>
-<p>Metadata of the first part of our database can however already be freely explored <a href="https://www.soiltempproject.com/the-soiltemp-database">here</a>.</p>
 </section>
 <section id="ecoregions" class="slide level2">
 <h2>Ecoregions</h2>
@@ -409,13 +466,13 @@ Author name<br/>
 <blockquote>
 <p>Marine Ecoregions of the World: A Bioregionalization of Coastal and Shelf Areas</p>
 </blockquote>
-<p>Super easy shapefile download <a href="https://www.worldwildlife.org/publications/marine-ecoregions-of-the-world-a-bioregionalization-of-coastal-and-shelf-areas">here</a>!</p>
+<p>Super easy shapefile download <a href="https://resourcewatch.org/data/explore/Marine-Ecoregions">here</a>!</p>
 <p><br></p>
 <p><strong>WWF TEOW</strong></p>
 <blockquote>
 <p>Terrestrial Ecoregions of the World</p>
 </blockquote>
-<p>Super easy shapefile download <a href="https://www.worldwildlife.org/publications/terrestrial-ecoregions-of-the-world">here</a>!</p>
+<p>Super easy shapefile download <a href="https://www.geographyrealm.com/terrestrial-ecoregions-gis-data">here</a>!</p>
 </section>
 <section id="protected-areas" class="slide level2">
 <h2>Protected areas</h2>
@@ -425,6 +482,11 @@ Author name<br/>
 </blockquote>
 <p>Interactive exploration <a href="https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=Methodology">here</a>.</p>
 <p>And a user guide <a href="https://wdpa.s3-eu-west-1.amazonaws.com/WDPA_Manual/English/WDPA_WDOECM_Manual_1_6.pdf">PDF</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/mpa.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
 </section>
 <section id="country-boundaries" class="slide level2">
 <h2>Country boundaries</h2>
@@ -439,6 +501,11 @@ Author name<br/>
 <p>Natural Earth is a public domain map dataset available at 1:10m, 1:50m, and 1:110 million scales. Featuring tightly integrated vector and raster data.</p>
 </blockquote>
 <p>Available features list <a href="https://www.naturalearthdata.com/features/">here</a>.</p>
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/natural-earth-logo.png" class="quarto-figure quarto-figure-right" style="width:40.0%"></p>
+</figure>
+</div>
 </section>
 <section id="country-boundaries-1" class="slide level2">
 <h2>Country boundaries</h2>
@@ -447,20 +514,20 @@ Author name<br/>
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="do">## Import boundaries of Africa ----</span></span>
-<span id="cb1-2"><a href=""></a></span>
-<span id="cb1-3"><a href=""></a>africa <span class="ot">&lt;-</span> rnaturalearth<span class="sc">::</span><span class="fu">ne_countries</span>(</span>
-<span id="cb1-4"><a href=""></a>  <span class="at">continent =</span> <span class="st">"africa"</span></span>
-<span id="cb1-5"><a href=""></a>)</span>
-<span id="cb1-6"><a href=""></a></span>
-<span id="cb1-7"><a href=""></a></span>
-<span id="cb1-8"><a href=""></a><span class="do">## Map layer ----</span></span>
-<span id="cb1-9"><a href=""></a></span>
-<span id="cb1-10"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-11"><a href=""></a></span>
-<span id="cb1-12"><a href=""></a><span class="fu">ggplot</span>(africa) <span class="sc">+</span> </span>
-<span id="cb1-13"><a href=""></a>  <span class="fu">geom_sf</span>() <span class="sc">+</span> </span>
-<span id="cb1-14"><a href=""></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-label="1"></a><span class="do">## Import boundaries of Africa ----</span></span>
+<span id="cb1-2"><a href="" aria-label="2"></a></span>
+<span id="cb1-3"><a href="" aria-label="3"></a>africa <span class="ot">&lt;-</span> rnaturalearth<span class="sc">::</span><span class="fu">ne_countries</span>(</span>
+<span id="cb1-4"><a href="" aria-label="4"></a>  <span class="at">continent =</span> <span class="st">"africa"</span></span>
+<span id="cb1-5"><a href="" aria-label="5"></a>)</span>
+<span id="cb1-6"><a href="" aria-label="6"></a></span>
+<span id="cb1-7"><a href="" aria-label="7"></a></span>
+<span id="cb1-8"><a href="" aria-label="8"></a><span class="do">## Map layer ----</span></span>
+<span id="cb1-9"><a href="" aria-label="9"></a></span>
+<span id="cb1-10"><a href="" aria-label="10"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-11"><a href="" aria-label="11"></a></span>
+<span id="cb1-12"><a href="" aria-label="12"></a><span class="fu">ggplot</span>(africa) <span class="sc">+</span> </span>
+<span id="cb1-13"><a href="" aria-label="13"></a>  <span class="fu">geom_sf</span>() <span class="sc">+</span> </span>
+<span id="cb1-14"><a href="" aria-label="14"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:60%;">
 <div class="cell">
@@ -473,19 +540,6 @@ Author name<br/>
 </div>
 </div>
 </div></div>
-</section>
-<section id="elevation-bathymetry" class="slide level2">
-<h2>Elevation &amp; Bathymetry</h2>
-<p><strong>DEM</strong></p>
-<p>Digital Elevation Model.</p>
-<p>Plenty available, but main ones are listed <a href="https://gisgeography.com/free-global-dem-data-sources/">here</a>.</p>
-<p><br></p>
-<p><strong>Bio-oracle</strong></p>
-<blockquote>
-<p>Essential physical, chemical, biological and topographic data layers with global extent and uniform resolution for modelling the distribution of marine biodiversity.</p>
-</blockquote>
-<p>Download manager <a href="https://bio-oracle.org/downloads-to-email.php">here</a>.</p>
-<p>Also features bathymetry.</p>
 </section>
 <section id="satellite-data" class="slide level2">
 <h2>Satellite data</h2>
@@ -501,7 +555,7 @@ Author name<br/>
 </blockquote>
 <p>Check out Modis collections <a href="https://developers.google.com/earth-engine/datasets/catalog/modis">here</a></p>
 <p><br><br></p>
-<p>/!&nbsp;<em>Satellite data is quite technical. Make sure you read the documentation - it’s easy to get lost.</em></p>
+<p>/!\ <em>Satellite data is quite technical. Make sure you read the documentation - it’s easy to get lost.</em></p>
 </section>
 <section id="socio-economics" class="slide level2">
 <h2>Socio-economics</h2>
@@ -510,6 +564,66 @@ Author name<br/>
 <p>Food and Agricultural Organization has a variety of statistical data on food, agriculture and the sustainable management of natural resources.</p>
 </blockquote>
 <p>Free and unrestricted access to 22 major databases. Check out portals list <a href="https://www.fao.org/statistics/data-dissemination/agrifood-systems/en">here</a>.</p>
+<p><strong>Human Footprint</strong></p>
+<blockquote>
+<p>A global map of human influence on the land surface.</p>
+</blockquote>
+<p>Access via Google Earth Engine, Github or direct GeoTiff download <a href="https://wcshumanfootprint.org/data-access">here</a>.</p>
+</section>
+<section id="data-aggregators" class="slide level2">
+<h2>Data aggregators</h2>
+<div class="columns">
+<div class="column" style="width:80%;">
+<h4 id="theia-data-catalog"><a href="https://catalogue.theia.data-terra.org/">Theia data catalog</a></h4>
+<p>Five major themes: cryosphere, continental waters, land cover, agrosystems &amp; biodiversity and imagery &amp; radiometry.</p>
+<p><br></p>
+<h4 id="odatis-ocean-center"><a href="https://www.odatis-ocean.fr/en/data-and-services/data-access/direct-access-to-the-data-catalogue#/search?from=1&amp;to=30">ODATIS Ocean Center</a></h4>
+<p>French Ocean observation data : Ocean observations sampled in situ and using remote sensing.</p>
+<p><br></p>
+<h4 id="formaterre"><a href="https://www.poleterresolide.fr/acces-aux-donnees/catalogue/">FormaTerre</a></h4>
+<p>On-demand processing for Digital Surface Models, ground deformation monitoring, etc.</p>
+<p><br></p>
+<h4 id="pndb-the-biodiversity-hub"><a href="https://www.pndb.fr/pages/pndb-themes-inspire/">PNDB, the biodiversity hub</a></h4>
+<p>Metadata catalog to access biodiversity data.</p>
+<p><br></p>
+<h4 id="aeris"><a href="https://www.aeris-data.fr/catalogue/">AERIS</a></h4>
+<p>National data management activities and atmospheric science expertise.</p>
+</div><div class="column" style="width:20%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/logo-theia.png" class="quarto-figure quarto-figure-right" style="width:80.0%"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/logo-odatis.png" class="quarto-figure quarto-figure-right" style="width:70.0%"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/logo-formaterre.png" class="quarto-figure quarto-figure-right" style="width:80.0%"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/logo-pndb.png" class="quarto-figure quarto-figure-right" style="width:50.0%"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/logo-aeris.png" class="quarto-figure quarto-figure-right" style="width:50.0%"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="data-aggregators-1" class="slide level2">
+<h2>Data aggregators</h2>
+<p><a href="https://developers.google.com/earth-engine/datasets?hl=fr">Earth Engine Data Catalog</a></p>
+<p>For France : <a href="https://www.data.gouv.fr/">Datagouv</a></p>
+</section>
+<section id="extra-goodies" class="slide level2">
+<h2>Extra goodies</h2>
+<p>A <a href="https://docs.google.com/spreadsheets/d/1OW6X94Ha_-_v5fe8XJlQp7ncubgF1CG6LgAIUk1kFcY/edit?usp=sharing">non-exhaustive sheet</a> made by our CESAB colleague Romain Frelat.</p>
 
 </section>
     </div>
