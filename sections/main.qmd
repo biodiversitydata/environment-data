@@ -197,18 +197,26 @@ Data access protocol [here](https://esa-worldcover.org/en/data-access).
 
 ## Water bodies
 
+:::: {.columns}
+**World rivers**
+
+[HydroSheds](https://www.hydrosheds.org/products): a suite of global digital data layers in support of hydro-ecological research and applications worldwide. Its various hydrographic data products include catchment boundaries, river networks, and lakes at multiple resolutions and scales.
+<br/>
+[Hydrography.org](https://hydrography.org/hydrography90m/hydrography90m_layers): 90m layers, world wide, mostly rasters. Lots of physical measures (stream length, water accumulation, etc). Multiple access possibilities.
+
+:::{.column width=50%}
 **Global Surface Waters**
 
 > 30m resolution World surface waters from 1984-2024.
 
 Download [here](https://global-surface-water.appspot.com/download)
+:::
 
-<br/>
+:::{.column width=50%}
+![](images/hydro.png){width=90% fig-align="right"}
+:::
 
-**World rivers**
-
-Hydrography 90m layers, world wide. Multiple access possibilities, check it out [here](https://hydrography.org/hydrography90m/hydrography90m_layers).
-
+::::
 
 
 
@@ -451,11 +459,15 @@ National data management activities and atmospheric science expertise.
 
 ## Data aggregators
 
+See also: 
+
 [Earth Engine Data Catalog](https://developers.google.com/earth-engine/datasets?hl=fr)
+
+<br/> <br/> <br/> 
 
 For France : [Datagouv](https://www.data.gouv.fr/)
 
 
 ## Extra goodies
 
-A [non-exhaustive sheet](https://docs.google.com/spreadsheets/d/1OW6X94Ha_-_v5fe8XJlQp7ncubgF1CG6LgAIUk1kFcY/edit?usp=sharing) made by our CESAB colleague Romain Frelat.
+A [non-exhaustive sheet](https://docs.google.com/spreadsheets/d/1OW6X94Ha_-_v5fe8XJlQp7ncubgF1CG6LgAIUk1kFcY/edit?usp=sharing) compiled by our CESAB colleague Romain Frelat.
