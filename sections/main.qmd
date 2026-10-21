@@ -192,7 +192,7 @@ Updated every six years (most recent in 2018).
 
 Data access protocol [here](https://esa-worldcover.org/en/data-access).
 
-![](images/worldcover-logo.png){width=25% fig-align="right"}
+![](images/worldcover-logo.png){width=20% fig-align="right"}
 
 
 ## Water bodies
@@ -200,9 +200,11 @@ Data access protocol [here](https://esa-worldcover.org/en/data-access).
 :::: {.columns}
 **World rivers**
 
-[HydroSheds](https://www.hydrosheds.org/products): a suite of global digital data layers in support of hydro-ecological research and applications worldwide. Its various hydrographic data products include catchment boundaries, river networks, and lakes at multiple resolutions and scales.
-<br/>
-[Hydrography.org](https://hydrography.org/hydrography90m/hydrography90m_layers): 90m layers, world wide, mostly rasters. Lots of physical measures (stream length, water accumulation, etc). Multiple access possibilities.
+- [HydroSheds](https://www.hydrosheds.org/products): a suite of global digital data layers in support of hydro-ecological research and applications worldwide. Its various hydrographic data products include catchment boundaries, river networks, and lakes at multiple resolutions and scales.
+
+- [Hydrography.org](https://hydrography.org/hydrography90m/hydrography90m_layers): 90m layers, world wide, mostly rasters. Lots of physical measures (stream length, water accumulation, etc). Multiple access possibilities.
+
+<br>
 
 :::{.column width=50%}
 **Global Surface Waters**
@@ -386,6 +388,8 @@ Check out Modis collections [here](https://developers.google.com/earth-engine/da
 
 Free and unrestricted access to 22 major databases. Check out portals list [here](https://www.fao.org/statistics/data-dissemination/agrifood-systems/en).
 
+<br>
+
 **Human Footprint**
 
 >  A global map of human influence on the land surface. 
@@ -459,13 +463,11 @@ National data management activities and atmospheric science expertise.
 
 ## Data aggregators
 
-See also: 
+- See also: [Earth Engine Data Catalog](https://developers.google.com/earth-engine/datasets?hl=fr)
 
-[Earth Engine Data Catalog](https://developers.google.com/earth-engine/datasets?hl=fr)
+<br/><br/>
 
-<br/> <br/> <br/> 
-
-For France : [Datagouv](https://www.data.gouv.fr/)
+- For France: [Datagouv](https://www.data.gouv.fr/)
 
 
 ## Extra goodies
